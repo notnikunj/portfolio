@@ -1,0 +1,116 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nikunj Bhavsar</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+    <body>
+        <nav>
+            <h1>Nikunj Bhavsar</h1>
+        </nav>
+
+        <div class="main-container">
+            <div class="row3">
+                <span>About</span>
+                <div class="bento-grid-container">
+                    
+                    <div class="timeclock" style="grid-area :clock">                        
+                            <span id="hrs">00</span>
+                            <span>:</span>
+                            <span id="mins">00</span>
+                    </div>
+                    <div class="bento-grid-item" style="grid-area :about">
+                        <p>👋 Hey there! I’m Nikunj, a curious mind with a knack for turning ideas into reality—whether it’s neural computing or just finding the best scenic spot for a weekend trip. I’m probably planning my next adventure or convincing my friends that a 2 AM road trip is a great idea. I thrive on challenges, whether it’s building AI platforms or cracking ethical dilemmas. If it’s complex, I’m in. If it’s fun, even better. Let’s build something awesome! </p>
+                    </div>
+                    <div class="bento-grid-item" style="grid-area :education">
+                        <span>University of Herfordshire</span>
+                        <p>2022 - 2025</p>
+
+                        <span>S.G School of Science</span>
+                        <p>2020 - 2022</p>
+
+                        <span>B.H.S Alkapuri</span>
+                        <p>2007 - 2020</p>
+
+                    </div>
+                    <div class="cheesecake" style="grid-area :cheesecake">
+                        <button class="cheesecakebutton">BSc (Hons) Computer Science</button>
+                    </div>
+                    <div class="bento-grid-item" style="grid-area: location ">
+                        <p>LONDON,UK</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row2">
+                <span>Work and Projects</span>
+                <div class="cards">
+                    <div class="workcard" style="grid-area: wc1">
+                        <img class="abc1 " src="cardcover.jpg" alt="">
+                        <span>The place to be Gallery</span>
+                        <p>Intern</p>
+                        <p>Jan 2023 - May 2023</p>
+
+                    </div>
+                    <div class="workcard" style="grid-area: wc2">
+                        <img class="abc1 " src="cardcover.jpg" alt="">
+                        <span>ISL Translator</span>
+                        <p>Final Year Project</p>
+                    </div>
+                    <div class="workcard" style="grid-area: wc3">
+                        <img class="abc1 " src="cardcover.jpg" alt="">
+                        <span>Parcel Manager</span>
+                        <p>Project</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row1">
+                <div class="landing">
+                    <div class="socials" style="grid-area: s1">
+                        <h3>Want to work together?</h3>
+                        <h5>contact:</h5>
+                        <p>nikunj15bhavsar@gmail.com</p>
+                        <h5>Socials:</h5>
+                        <a href="https://www.instagram.com/notnikunj/" target="_blank">Instagram</a>
+                        <a href="https://github.com/notnikunj" target="_blank">Github</a>
+                        <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="techstack" style="grid-area: t1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />                
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <script>
+            let hrs = document.getElementById("hrs");
+            let mins = document.getElementById("mins");
+
+            setInterval(()=>{
+                let currentTime = new Date();
+                hrs.innerHTML = (currentTime.getHours()<10?"0":" ") + currentTime.getHours();
+                mins.innerHTML = (currentTime.getMinutes()<10?"0":" ") + currentTime.getMinutes(); 
+            },1000)
+        </script>
+  
+    </body>
+</html>
+
+

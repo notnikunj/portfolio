@@ -1,0 +1,247 @@
+/*General*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.techstack img{
+    height: 40px;
+}
+
+.main-container{
+    max-width: 90%;
+    justify-self: center;
+    justify-content: center;
+}
+
+nav{
+    padding-top: 30px;
+    background-color: black;
+    box-shadow: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100px;
+}
+
+nav h1 {
+    padding: 20px;
+    font-size: 3rem;
+    color: sandybrown;
+    font-weight: 300;
+    letter-spacing: 10px;
+    
+}
+
+.landing{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 100%;
+    gap: 10px;
+    grid-template-areas: 
+        "s1 t1"
+    ;
+}
+
+.techstack, .socials{
+    background-color: rgb(29, 29, 29);
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+
+}
+
+.techstack{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socials h3{
+    color: sandybrown;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+
+.socials h5{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 1px;
+}
+
+.socials p{
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    
+
+}
+
+.row3, .row2 span {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+
+}
+
+.workcard span{
+    padding: 15px;
+}
+.workcard p{
+    color: white;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.cards{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 100%;
+    gap: 10px;
+    grid-template-areas: 
+        "wc1 wc2 wc3"
+    ;
+}
+
+.workcard{
+    background-color: black(29, 29, 29);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.workcard img{
+    height: 450px;
+    width: 500px;
+}
+
+
+.bento-grid-container{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 100%;
+    gap: 10px;
+    grid-template-areas: 
+        "clock about about"
+        "education about about"
+        "education cheesecake location"
+    
+    ;
+}
+
+.bento-grid-item, .cheesecake, .timeclock{
+    padding: 2rem;
+    background-color: rgb(29, 29, 29);
+    border-radius: 15px;
+}
+
+.bento-grid-item, .cheesecake, .timeclock p{
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.bento-grid-item span{
+    color: sandybrown;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.cheesecakebutton{
+    font-size: 1.5rem;
+    border: none;
+    color: sandybrown;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+.cheesecake{
+    padding: 0;
+    display: grid;
+
+}
+
+.timeclock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1, .row2, .row3{
+    margin-top: 50px;
+    margin-bottom: 50px;
+} 
+
+@media screen and (max-width : 650px) {
+    .bento-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "clock"
+            "about"
+            "education"
+            "cheesecake"
+            "location"
+        
+        ;
+    }
+
+    .cards{
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "wc1"
+            "wc2"
+            "wc3"
+        ;
+    }
+
+    .landing{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "t1"
+            "s1"
+        ;
+    }
+    
+}
+
+
+
+
