@@ -4,20 +4,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Nikunj Bhavsar</title>
+        <link rel="shortcut icon" href="myphoto.png" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     </head>
     <body>
-        <nav>
+        <div id="background"></div>
+
+        <header>
             <h1>Nikunj Bhavsar</h1>
-        </nav>
+        </header>
 
         <div class="main-container">
             <div class="row3">
-                <span>About</span>
                 <div class="bento-grid-container">
                     
                     <div class="timeclock" style="grid-area :clock">                        
@@ -40,39 +44,13 @@
 
                     </div>
                     <div class="cheesecake" style="grid-area :cheesecake">
-                        <button class="cheesecakebutton">BSc (Hons) Computer Science</button>
+                        <a href="work.html">
+                            <button class="cheesecakebutton">Projects</button>
+                        </a>
                     </div>
                     <div class="bento-grid-item" style="grid-area: location ">
-                        <p>LONDON,UK</p>
+                        <p>Machine Learning | Agentic AI</p>
                     </div>
-
-
-                </div>
-            </div>
-            <div class="row2">
-                <span>Work and Projects</span>
-                <div class="cards">
-                    <div class="workcard" style="grid-area: wc1">
-                        <img class="abc1 " src="cardcover.jpg" alt="">
-                        <span>The place to be Gallery</span>
-                        <p>Intern | Jan 2023 - May 2023</p>
-
-                    </div>
-                    <div class="workcard" style="grid-area: wc2">
-                        <img class="abc1 " src="cardcover.jpg" alt="">
-                        <span>ISL Translator</span>
-                        <p>Final Year Project</p>
-                    </div>
-                    <div class="workcard" style="grid-area: wc3">
-                        <img class="abc1 " src="cardcover.jpg" alt="">
-                        <span>Parcel Manager</span>
-                        <p>Project</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row1">
-                <div class="landing">
                     <div class="socials" style="grid-area: s1">
                         <h3>Want to work together?</h3>
                         <h5>contact:</h5>
@@ -83,16 +61,21 @@
                         <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" target="_blank">LinkedIn</a>
                     </div>
                     <div class="techstack" style="grid-area: t1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />                
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />                
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" />
+                        <img class="tci" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
                     </div>
+
+
                 </div>
             </div>
+            
 
 
         </div>
@@ -100,6 +83,23 @@
 
 
         <script>
+            VANTA.NET({
+            el: "#background",
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0xFF9248,
+            backgroundColor: 0x0E0E10,
+            points: 10.0,
+            maxDistance: 25.0,
+            spacing: 28.0,
+            showDots: false
+            });
+
+
             let hrs = document.getElementById("hrs");
             let mins = document.getElementById("mins");
 
