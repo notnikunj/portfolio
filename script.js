@@ -1,0 +1,29 @@
+  const openButtons = document.querySelectorAll('.open-modal');
+  const closeButtons = document.querySelectorAll('.close-modal');
+  const modals = document.querySelectorAll('.modal');
+
+openButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.parentElement.getAttribute('data-modal');
+      document.getElementById(modalId).style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    });
+});
+
+closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+});
+
+
+  // Close modal when clicking outside content
+modals.forEach(modal => {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+});
