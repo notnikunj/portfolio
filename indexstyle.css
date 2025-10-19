@@ -1,4 +1,3 @@
-/* Reset + base */
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +50,7 @@ h2{
   color: #777;
 }
 
-/* ===== HERO SECTION ===== */
+/* HERO SECTION */
 .hero {
   display: flex;
   justify-content: center;
@@ -69,15 +68,12 @@ h2{
   background-position: center;
   background-repeat: no-repeat;
 
-
-
 }
 
 .hero-content {
   animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Name */
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -86,7 +82,6 @@ h2{
   color: #000;
 }
 
-/* Accent Line */
 .accent-line {
   width: 80px;
   height: 3px;
@@ -95,7 +90,6 @@ h2{
   border-radius: 0;
 }
 
-/* Subtitle */
 .hero-intro {
   font-size: 1.1rem;
   color: #444;
@@ -128,13 +122,13 @@ h2{
   background-color: #333;
 }
 
-/* Fade-in animation */
+/* animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Adjustments */
+/* Media */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 2.2rem;
@@ -171,13 +165,7 @@ h2{
 }
 
 
-
-
-
-
-
-/* ===== WORK SECTION ===== */
-
+/* WORK SECTION */
 
 .work-section h2 {
   font-size: 2.2rem;
@@ -185,12 +173,10 @@ h2{
   letter-spacing: 1px;
 }
 
-
-
 .work-section {
 
   background: #fff;
-  overflow-x: auto;           /* Enables horizontal scroll */
+  overflow-x: auto;           
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -202,7 +188,7 @@ h2{
   width: max-content;
   padding-left: 60px;
   padding-right: 60px;
-  scroll-snap-type: x mandatory;  /* Enables snap scrolling */
+  scroll-snap-type: x mandatory;  
   scroll-behavior: smooth;
   animation: fadeIn 1.2s ease-in-out;
   justify-content: space-around;
@@ -214,12 +200,12 @@ h2{
   background: #f5f5f5;
   transition: 0.6s ease;
   overflow: hidden;
-  aspect-ratio: 4 / 6;         /* ✅ maintains fixed shape across devices */
-  width: 25vw;                 /* responsive width */
-  min-width: 280px;            /* prevent being too small */
+  aspect-ratio: 4 / 6;         
+  width: 25vw;                 
+  min-width: 280px;            
   max-width: 400px;
   max-height: 682px;
-  scroll-snap-align: start;   /* Optional: smooth stop per card */
+  scroll-snap-align: start;   
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -230,7 +216,7 @@ h2{
 .card-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fills card fully, crops if needed */
+    object-fit: cover; 
     display: block;
 }
 
@@ -268,7 +254,7 @@ h2{
   transform: scale(1.05);
 }
 
-/* ===== MODAL ===== */
+/* MODAL */
 .modal {
   position: fixed;
   top: 0;
@@ -353,7 +339,7 @@ h2{
 
 
 
-/* Large tablets / small laptops */
+/* Media */
 @media (max-width: 1200px) {
   .work-card {
     flex: 0 0 340px;
@@ -364,7 +350,6 @@ h2{
   }
 }
 
-/* Tablets */
 @media (max-width: 900px) {
   .work-card {
     flex: 0 0 300px;
@@ -380,10 +365,9 @@ h2{
   }
 }
 
-/* Mobile phones */
 @media (max-width: 600px) {
   .work-card {
-    flex: 0 0 90vw;        /* Each card takes most of the screen */
+    flex: 0 0 90vw;        
     height: 70vh;
   }
   .work-grid {
@@ -406,19 +390,25 @@ h2{
   .modal-content {
     padding: 20px;
     padding-top: 60px;
-
-
   }
-
-
 
 }
 
 
 
-/* ====== ABOUT SECTION ====== */
+/* ABOUT SECTION */
 .about-section {
   padding: 80px 5vw;
+  background: 
+    linear-gradient(to top, rgba(255, 255, 255, 0.276) 5%, #ffffff 100%),
+    url('image.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+
 }
 
 .about-container {
@@ -459,7 +449,6 @@ h2{
   margin-bottom: 40px;
 }
 
-/* Subsections (Education + Skills) */
 .about-subsection {
   margin-bottom: 40px;
 }
@@ -494,12 +483,12 @@ h2{
   padding: 12px 10px;
   font-size: 0.95rem;
   color: black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 
 
-/* ====== RESPONSIVE ====== */
+/* Media */
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
