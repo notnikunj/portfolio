@@ -18,195 +18,199 @@
       </nav>
     </header>
 
-    <main class="hero">
-        <div class="hero-content">
-            <h1>NIKUNJ BHAVSAR</h1>
-            <div class="accent-line"></div>
-            <p class="hero-intro">
-            Data Scientist & Developer<br>
-            </p>
+    <div class="main-wrapper">
 
-            <div class="hero-links">
-                <a href="https://github.com/notnikunj" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" target="_blank">LinkedIn</a>
-                <a href="mailto:nikunj15bhavsar@gmail.com">Email</a>
-            </div>
-
-
-        </div>
-    </main>
-
-    <section id="work" class="section work-section">
-        <h2>Projects</h2>
-        <div class="work-grid">
-
-            <div class="work-card" data-modal="modal1">
-                <img src="ISL.png" alt="Sign Language Translator" class="card-image" />
-                <button class="open-modal">+</button>
-            </div>
-
-            <div class="work-card" data-modal="modal2">
-                <img src="voyager.png" alt="Voyager app Screen" class="card-image" />
-                <button class="open-modal">+</button>
-            </div>
-
-            <div class="work-card" data-modal="modal3">
-                <img src="ParcelManagementSoftware.webp" alt="Parcel Management Software" class="card-image" />
-                <button class="open-modal">+</button>
-            </div>
-
-            <div class="work-card" data-modal="modal4">
-                <img src="portfolio.png" alt="Previous Portfolio" class="card-image" />
-                <button class="open-modal">+</button>
-            </div>
-
-            <div class="work-card" data-modal="modal5">
-                <img src="datascience.png" alt="Data Analytics" class="card-image" />
-                <button class="open-modal">+</button>
-            </div>
-        </div>
-    </section>
-
-
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <h3>INDIAN SIGN LANGUAGE TRANSLATOR</h3>
-            <p>
-            For my final year project, I developed a real-time Indian Sign Language (ISL) alphabet recognition system using a deep learning approach to bridge communication gaps for the Deaf and hard-of-hearing. The task involved curating a dataset of ~51,000 static ISL gesture images and applying data augmentation. Thenafter, a ResNet50 model was fine-tuned via transfer learning, achieving 96.4% validation accuracy. It faced challenges with visually similar letters like 'J' and 'K'. The model was integrated into a real-time application using OpenCV for webcam input. The model then processes frames to display predicted letters instantly, demonstrating a functional prototype that operates efficiently on standard hardware. This project lays a foundation for future expansion into dynamic gestures and full ISL vocabulary.
-            </p>
-            <h3>TECH USED</h3>
-            <p>Python</p>
-            <p>ResNet50 (Deep CNN)</p>
-            <p>OpenCV, TensorFlow Keras</p>
-            <div class="github">
-                <a href="Nikunj Bhavsar FInal Report.pdf" target="_blank">Report</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <h3>VOYAGER APP</h3>
-            <p>
-                Voyager is a mobile travel companion I developed to solve the problem of spontaneous and efficient trip planning. Built with React Native for a cross-platform iOS and Android experience, the app features a clean, modern UI styled with Tailwind CSS and is powered by Google Places API for its location intelligence.
-            </p>
-            <p>
-                The app's primary functionality allows users to discover points of interest such as landmarks, museums, restaurants, and parks within a specified radius of their current location. By leveraging the Google Places API, Voyager provides reliable data including user photos and description. The core user journey involves exploring these suggestions and then building a personalized day itinerary. Users can add or remove destinations, visualize the order of their trip, and have all essential information consolidated in one place.
-            </p>
-            <h3>TECH USED</h3>
-            <p>JavaScript</p>
-            <p>React-Native</p>
-            <p>Google Places API</p>
-            <p>Tailwind CSS</p>
-            <div class="github">
-                <a href="https://snack.expo.dev/@notnikunj/voyager-prototype" target="_blank">Snack</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <h3>PARCEL MANAGEMENT SOFTWARE</h3>
-            <p>
-               For my Software Architecture assignment, I successfully implemented a fully functional Java application to simulate depot parcel collection. The core system was built around the required classes, utilizing a HashMap for the ParcelMap to enable efficient parcel lookup by ID and a LinkedList for the QueueofCustomers to manage customer order. The final Swing-based GUI was structured using the MVC pattern, featuring dynamically updating panels for the parcel backlog, customer queue, and current transaction details, which ensured a responsive user experience. This implementation was version-controlled through multiple strategic Git commits.
-            </p>
-            <h3>TECH USED</h3>
-            <p>JAVA</p>
-            <p>Swing GUI</p>
-            <p>Git</p>
-            <div class="github">
-                <a href="https://github.com/notnikunj/Parcel_Depot" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <h3>PORTFOLIO</h3>
-            <p>
-                This was my first real attempt to put myself out there, to experiment, learn, and express who I was at that moment. Every line of code, color choice, and detail carried a sense of discovery. But over time, my perspective began to shift. I learned to appreciate simplicity, flow, and intent. 
-            </p>
-            <p>
-                This new version of my portfolio represents that evolution. It’s not just about showcasing projects; it’s about the process, the iterations, the lessons, and the quiet growth that happens behind the scene. It’s cleaner, more thoughtful and constantly evolving. 
-            </p>
-            <h3>TECH USED</h3>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <div class="github">
-                <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" target="_blank">GitHub</a>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div id="modal5" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <h3>DATA CLASSIFICATION FOR DIABETES</h3>
-            <p>
-            This case study explores the use of Principal Component Analysis (PCA) and Support Vector Machine (SVM) classifiers for diabetes diagnosis by analyzing health indicator data from two distinct groups: physically inactive (NoActivity) and active (PhysActivity) individuals. After normalizing the data and using PCA for exploratory analysis, which showed partial but incomplete class separation, group-specific SVM models with an RBF kernel were tuned, achieving test accuracies of 73.4% for the NoActivity group and 74.7% for the PhysActivity group. A critical cross-evaluation revealed limited model generalizability, as the PhysActivity model's accuracy dropped to 65% on the NoActivity test set, demonstrating that population-specific models are necessary due to the significant impact of lifestyle on the underlying patterns in the data.
-            </p>
-            <h3>TECH USED</h3>
-            <p>Jupyter Notebook</p>
-            <p>Python</p>
-            <p>Pandas, Numpy, Matplotlib, SciKit-learn</p>
-            <div class="github">
-                <a href="5F92F76C-FD07-48C7-8F2E-5D8EF5400A4C.pdf" target="_blank">Report</a>
-            </div>
-        </div>
-    </div>
-
-    <section id="about" class="section about-section">
-        <div class="about-container">
-
-            <div class="about-image">
-                <img src="myphoto.jpg" alt="My Photo">
-            </div>
-
-            <div class="about-content">
-                <h3>About Me</h3>
-                <p>
-                    I am a Data Scientist and Developer with a strong foundation in data analysis, machine learning, and software development. I moved to the UK in 2022 to pursue higher education and have since developed a passion to create impactful solutions. 
-                    Currently pursuing an MSc in Data Science at the University of Bristol, I am eager to apply my skills to solve real-world problems and contribute to innovative projects.
+        <main class="hero">
+            <div class="hero-content">
+                <h1>NIKUNJ BHAVSAR</h1>
+                <div class="accent-line"></div>
+                <p class="hero-intro">
+                Data Scientist & Developer<br>
                 </p>
 
-                <div class="about-subsection">
-                    <h3>Education</h3>
-                    <ul class="education-list">
-                    <li><strong>MSc Data Science</strong> – University of Bristol, UK (2025 – Present)</li>
-                    <li><strong>BSc (Hons) Computer Science</strong> – University of Hertfordshire, UK (2022 – 2025, First Class Hons.)</li>
-                    </ul>
+                <div class="hero-links">
+                    <a href="https://github.com/notnikunj" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" target="_blank">LinkedIn</a>
+                    <a href="mailto:nikunj15bhavsar@gmail.com">Email</a>
                 </div>
 
-                <div class="about-subsection">
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                    <div class="skill-item">Python, Django</div>
-                    <div class="skill-item">Java, Spring</div>
-                    <div class="skill-item">MySQL</div>
-                    <div class="skill-item">R</div>
-                    <div class="skill-item">CSS</div>
-                    <div class="skill-item">HTML</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">React, Native</div>
-                    <div class="skill-item">AWS</div>
-                    <div class="skill-item">Data Visualization</div>
-                    <div class="skill-item">Data Wrangling</div>
-                    <div class="skill-item">Data Modeling</div>
-                    <div class="skill-item">Statistical Analysis</div>
-                    <div class="skill-item">ML Models</div>
+
+            </div>
+        </main>
+
+        <section id="work" class="section work-section">
+            <h2>Projects</h2>
+            <div class="work-grid">
+
+                <div class="work-card" data-modal="modal1">
+                    <img src="ISL.png" alt="Sign Language Translator" class="card-image" />
+                    <button class="open-modal">+</button>
+                </div>
+
+                <div class="work-card" data-modal="modal2">
+                    <img src="voyager.png" alt="Voyager app Screen" class="card-image" />
+                    <button class="open-modal">+</button>
+                </div>
+
+                <div class="work-card" data-modal="modal3">
+                    <img src="ParcelManagementSoftware.webp" alt="Parcel Management Software" class="card-image" />
+                    <button class="open-modal">+</button>
+                </div>
+
+                <div class="work-card" data-modal="modal4">
+                    <img src="portfolio.png" alt="Previous Portfolio" class="card-image" />
+                    <button class="open-modal">+</button>
+                </div>
+
+                <div class="work-card" data-modal="modal5">
+                    <img src="datascience.png" alt="Data Analytics" class="card-image" />
+                    <button class="open-modal">+</button>
                 </div>
             </div>
+        </section>
+
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>INDIAN SIGN LANGUAGE TRANSLATOR</h3>
+                <p>
+                For my final year project, I developed a real-time Indian Sign Language (ISL) alphabet recognition system using a deep learning approach to bridge communication gaps for the Deaf and hard-of-hearing. The task involved curating a dataset of ~51,000 static ISL gesture images and applying data augmentation. Thenafter, a ResNet50 model was fine-tuned via transfer learning, achieving 96.4% validation accuracy. It faced challenges with visually similar letters like 'J' and 'K'. The model was integrated into a real-time application using OpenCV for webcam input. The model then processes frames to display predicted letters instantly, demonstrating a functional prototype that operates efficiently on standard hardware. This project lays a foundation for future expansion into dynamic gestures and full ISL vocabulary.
+                </p>
+                <h3>TECH USED</h3>
+                <p>Python</p>
+                <p>ResNet50 (Deep CNN)</p>
+                <p>OpenCV, TensorFlow Keras</p>
+                <div class="github">
+                    <a href="Nikunj Bhavsar FInal Report.pdf" target="_blank">Report</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>VOYAGER APP</h3>
+                <p>
+                    Voyager is a mobile travel companion I developed to solve the problem of spontaneous and efficient trip planning. Built with React Native for a cross-platform iOS and Android experience, the app features a clean, modern UI styled with Tailwind CSS and is powered by Google Places API for its location intelligence.
+                </p>
+                <p>
+                    The app's primary functionality allows users to discover points of interest such as landmarks, museums, restaurants, and parks within a specified radius of their current location. By leveraging the Google Places API, Voyager provides reliable data including user photos and description. The core user journey involves exploring these suggestions and then building a personalized day itinerary. Users can add or remove destinations, visualize the order of their trip, and have all essential information consolidated in one place.
+                </p>
+                <h3>TECH USED</h3>
+                <p>JavaScript</p>
+                <p>React-Native</p>
+                <p>Google Places API</p>
+                <p>Tailwind CSS</p>
+                <div class="github">
+                    <a href="https://snack.expo.dev/@notnikunj/voyager-prototype" target="_blank">Snack</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>PARCEL MANAGEMENT SOFTWARE</h3>
+                <p>
+                For my Software Architecture assignment, I successfully implemented a fully functional Java application to simulate depot parcel collection. The core system was built around the required classes, utilizing a HashMap for the ParcelMap to enable efficient parcel lookup by ID and a LinkedList for the QueueofCustomers to manage customer order. The final Swing-based GUI was structured using the MVC pattern, featuring dynamically updating panels for the parcel backlog, customer queue, and current transaction details, which ensured a responsive user experience. This implementation was version-controlled through multiple strategic Git commits.
+                </p>
+                <h3>TECH USED</h3>
+                <p>JAVA</p>
+                <p>Swing GUI</p>
+                <p>Git</p>
+                <div class="github">
+                    <a href="https://github.com/notnikunj/Parcel_Depot" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>PORTFOLIO</h3>
+                <p>
+                    This was my first real attempt to put myself out there, to experiment, learn, and express who I was at that moment. Every line of code, color choice, and detail carried a sense of discovery. But over time, my perspective began to shift. I learned to appreciate simplicity, flow, and intent. 
+                </p>
+                <p>
+                    This new version of my portfolio represents that evolution. It’s not just about showcasing projects; it’s about the process, the iterations, the lessons, and the quiet growth that happens behind the scene. It’s cleaner, more thoughtful and constantly evolving. 
+                </p>
+                <h3>TECH USED</h3>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <div class="github">
+                    <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" target="_blank">GitHub</a>
+                </div>
+
 
             </div>
         </div>
-    </section>
+
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <h3>DATA CLASSIFICATION FOR DIABETES</h3>
+                <p>
+                This case study explores the use of Principal Component Analysis (PCA) and Support Vector Machine (SVM) classifiers for diabetes diagnosis by analyzing health indicator data from two distinct groups: physically inactive (NoActivity) and active (PhysActivity) individuals. After normalizing the data and using PCA for exploratory analysis, which showed partial but incomplete class separation, group-specific SVM models with an RBF kernel were tuned, achieving test accuracies of 73.4% for the NoActivity group and 74.7% for the PhysActivity group. A critical cross-evaluation revealed limited model generalizability, as the PhysActivity model's accuracy dropped to 65% on the NoActivity test set, demonstrating that population-specific models are necessary due to the significant impact of lifestyle on the underlying patterns in the data.
+                </p>
+                <h3>TECH USED</h3>
+                <p>Jupyter Notebook</p>
+                <p>Python</p>
+                <p>Pandas, Numpy, Matplotlib, SciKit-learn</p>
+                <div class="github">
+                    <a href="5F92F76C-FD07-48C7-8F2E-5D8EF5400A4C.pdf" target="_blank">Report</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" class="section about-section">
+            <div class="about-container">
+
+                <div class="about-image">
+                    <img src="myphoto.jpg" alt="My Photo">
+                </div>
+
+                <div class="about-content">
+                    <h3>About Me</h3>
+                    <p>
+                        I am a Data Scientist and Developer with a strong foundation in data analysis, machine learning, and software development. I moved to the UK in 2022 to pursue higher education and have since developed a passion to create impactful solutions. 
+                        Currently pursuing an MSc in Data Science at the University of Bristol, I am eager to apply my skills to solve real-world problems and contribute to innovative projects.
+                    </p>
+
+                    <div class="about-subsection">
+                        <h3>Education</h3>
+                        <ul class="education-list">
+                        <li><strong>MSc Data Science</strong> – University of Bristol, UK (2025 – Present)</li>
+                        <li><strong>BSc (Hons) Computer Science</strong> – University of Hertfordshire, UK (2022 – 2025, First Class Hons.)</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-subsection">
+                        <h3>Skills</h3>
+                        <div class="skills-grid">
+                        <div class="skill-item">Python, Django</div>
+                        <div class="skill-item">Java, Spring</div>
+                        <div class="skill-item">MySQL</div>
+                        <div class="skill-item">R</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">React, Native</div>
+                        <div class="skill-item">AWS</div>
+                        <div class="skill-item">Data Visualization</div>
+                        <div class="skill-item">Data Wrangling</div>
+                        <div class="skill-item">Data Modeling</div>
+                        <div class="skill-item">Statistical Analysis</div>
+                        <div class="skill-item">ML Models</div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
 
     
 

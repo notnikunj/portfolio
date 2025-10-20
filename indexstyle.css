@@ -9,11 +9,16 @@ html, body {
   background-color: white;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: black;
-  overscroll-behavior: none; 
   scroll-behavior: smooth;
+  overflow: hidden; 
 
+}
 
-
+.main-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
 }
 
 h2{
