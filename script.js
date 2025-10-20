@@ -6,7 +6,7 @@ openButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const modalId = btn.parentElement.getAttribute('data-modal');
       document.getElementById(modalId).style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // prevent background scroll
+      document.body.style.overflow = 'hidden'; 
     });
 });
 
@@ -18,12 +18,3 @@ closeButtons.forEach(btn => {
 });
 
 
-  // Close modal when clicking outside content
-modals.forEach(modal => {
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-    });
-});

@@ -21,9 +21,7 @@ html, body {
   -webkit-overflow-scrolling: touch; 
 }
 
-h2{
-  margin-left: 60px;
-}
+
 
 .navigation-bar {
   position: fixed;
@@ -64,15 +62,6 @@ h2{
   background-color: #fff;
   text-align: center;
   padding: 0 20px;
-
-  background: 
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffffff 100%),
-    url('image.png');
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
 }
 
 .hero-content {
@@ -173,9 +162,10 @@ h2{
 /* WORK SECTION */
 
 .work-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   letter-spacing: 1px;
+  margin-left: 60px;
 }
 
 .work-section {
@@ -278,7 +268,7 @@ h2{
 .modal-content {
   background: #fff;
   padding: 80px;
-  width: 80vw;
+  width: 95vw;
   position: relative;
   animation: slideUp 0.4s ease;
   text-align: left;
@@ -368,6 +358,18 @@ h2{
   .work-grid::after {
     flex: 0 0 4vw;
   }
+
+  .work-section h2 {
+    margin-left: 4vw;
+  }
+
+  .modal-content {
+
+    height: 70vh;
+
+  }
+
+
 }
 
 @media (max-width: 600px) {
@@ -392,9 +394,18 @@ h2{
     height: 30px;
     font-size: 1.2rem;
   }
+
   .modal-content {
     padding: 20px;
     padding-top: 60px;
+    height: 60vh;
+    width: 95vw;
+
+  }
+
+
+  .work-section h2 {
+    margin-left: 4vw;
   }
 
 }
@@ -404,9 +415,6 @@ h2{
 /* ABOUT SECTION */
 .about-section {
   padding: 80px 5vw;
-
-
-
 
 }
 
@@ -535,4 +543,14 @@ h2{
     font-size: 0.9rem;
     padding: 10px;
   }
+}
+
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.2);
 }
