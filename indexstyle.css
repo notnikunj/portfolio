@@ -404,13 +404,7 @@ h2{
 /* ABOUT SECTION */
 .about-section {
   padding: 80px 5vw;
-  background: 
-    linear-gradient(to top, rgba(255, 255, 255, 0.276) 5%, #ffffff 100%),
-    url('image.png');
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
 
 
