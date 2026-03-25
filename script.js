@@ -19,7 +19,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
-// Custom cursor effect (desktop only)
+// Custom cursor effect 
 const cursor = document.getElementById('cursor');
 let mouseX = 0;
 let mouseY = 0;
