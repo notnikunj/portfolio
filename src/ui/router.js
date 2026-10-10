@@ -30,7 +30,7 @@ export function routeHref(r) {
 }
 
 export function routeTitle(r, { regionById, projectBySlug, site }) {
-  const base = `${site.name}, data scientist and developer`;
+  const base = site.name;
   if (r.mode !== 'region') return base;
   if (r.item) return `${projectBySlug[r.item].title}, ${site.name}`;
   return `${regionById[r.region].label}, ${site.name}`;

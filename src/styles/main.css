@@ -612,36 +612,138 @@ ul.plain li + li {
     visibility 0s linear 0.3s;
 }
 
-/* doc view: a bottom bar, always within thumb reach */
-[data-view='doc'] .legend {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--ground);
-  border-top: 1px solid var(--hair);
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
-[data-view='doc'] .legend-list {
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding: 0 calc(var(--gutter) - 12px);
-}
-
-[data-view='doc'] .legend-list::-webkit-scrollbar {
+/* doc view below 1180px: a round menu button in the bottom-right corner */
+.legend-toggle {
   display: none;
-}
-
-[data-view='doc'] .legend a {
-  min-height: var(--legend-bar);
-  padding: 0 12px;
-  font-size: 1rem;
 }
 
 [data-view='doc'] .legend-n {
   display: none;
+}
+
+@media (max-width: 1179px) {
+  [data-view='doc'] .legend {
+    position: fixed;
+    z-index: 20;
+    right: calc(16px + env(safe-area-inset-right));
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  /* the shadow over the whole screen while the menu is open */
+  [data-view='doc'] .legend::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.88);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.25s,
+      visibility 0s linear 0.25s;
+  }
+
+  [data-view='doc'] .legend.is-open::before {
+    opacity: 1;
+    visibility: visible;
+    transition:
+      opacity 0.25s,
+      visibility 0s;
+  }
+
+  [data-view='doc'] .legend-toggle {
+    order: 2;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ground);
+    color: var(--ink);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease);
+  }
+
+  [data-view='doc'] .legend-toggle:active {
+    transform: scale(0.94);
+  }
+
+  .legend-toggle svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+
+  .legend-toggle .icon-close,
+  .legend-toggle[aria-expanded='true'] .icon-open {
+    display: none;
+  }
+
+  .legend-toggle[aria-expanded='true'] .icon-close {
+    display: block;
+  }
+
+  /* the menu itself: just text, right-aligned above the button */
+  [data-view='doc'] .legend-list {
+    order: 1;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition:
+      opacity 0.2s,
+      transform 0.3s var(--ease),
+      visibility 0s linear 0.3s;
+  }
+
+  [data-view='doc'] .legend.is-open .legend-list {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition:
+      opacity 0.25s 0.05s,
+      transform 0.3s var(--ease) 0.05s,
+      visibility 0s;
+  }
+
+  [data-view='doc'] .legend a {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 14px;
+    min-height: 52px;
+    padding: 0 21px 0 0;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--ink);
+  }
+
+  [data-view='doc'] .legend a .marker {
+    color: var(--muted);
+  }
+
+  [data-view='doc'] .legend a[aria-current] .marker {
+    color: var(--gold);
+  }
+
+  /* without JavaScript the button can't open anything, so just show the list */
+  .no-js .legend-toggle {
+    display: none;
+  }
+
+  .no-js .legend-list {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
 }
 
 @media (min-width: 1180px) {

@@ -307,7 +307,7 @@ function setupDocObservers() {
           else a.removeAttribute('aria-current');
         }
         els.path.textContent = regionById[id] ? regionById[id].label.toLowerCase() : '';
-        legendLinks[id]?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        
       }
     },
     { rootMargin: '-45% 0px -50% 0px' }
@@ -379,6 +379,30 @@ function updateExclusion() {
   field.setExclusion({ left: r.left - s.left, right: r.right - s.left });
 }
 new ResizeObserver(updateExclusion).observe(els.legend);
+
+
+// ---------------------------------------------------------------- mobile menu
+const menuButton = $('#legend-toggle');
+
+function setMenu(open, { focusButton = false } = {}) {
+  els.legend.classList.toggle('is-open', open);
+  menuButton.setAttribute('aria-expanded', String(open));
+  if (open && lastInputWasKeyboard) els.legend.querySelector('.legend-list a')?.focus();
+  if (!open && focusButton) menuButton.focus();
+}
+
+menuButton.addEventListener('click', () => setMenu(!els.legend.classList.contains('is-open')));
+
+// Close after choosing a section, on Escape, or on a tap anywhere else.
+els.legend.addEventListener('click', (e) => {
+  if (e.target.closest('.legend-list a')) setMenu(false);
+});
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && els.legend.classList.contains('is-open')) setMenu(false, { focusButton: true });
+});
+document.addEventListener('pointerdown', (e) => {
+  if (els.legend.classList.contains('is-open') && !els.legend.contains(e.target)) setMenu(false);
+});
 
 // ---------------------------------------------------------------- start
 if (route.mode === 'intro' && !location.hash) history.replaceState(null, '', location.pathname + location.search);

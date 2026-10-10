@@ -201,7 +201,7 @@ export function renderLegend() {
         `<li><a href="#doc-${r.id}" data-region="${r.id}"><span class="marker marker--${r.marker}" aria-hidden="true"></span><span class="legend-label">${esc(r.label)}</span>${counts[r.id] ? `<span class="legend-n mono" aria-hidden="true">${counts[r.id]}</span>` : ''}</a></li>`
     )
     .join('');
-  return `<ul class="legend-list">${items}</ul>`;
+  return `<ul class="legend-list" id="legend-list">${items}</ul>`;
 }
 
 export function renderJsonLd() {
