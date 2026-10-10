@@ -1,0 +1,22 @@
+{
+  "name": "nikunjbhavsar.com",
+  "version": "1.0.0",
+  "description": "Personal site of Nikunj Bhavsar",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  }
+}

@@ -1,141 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikunj Bhavsar</title>
-    <link rel="shortcut icon" href="titlephoto.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="cursor-dot" id="cursor"></div>
-    <nav>
-        <div class="logo">nb.</div>
-    </nav>
+<!doctype html>
+<html lang="en-GB" class="no-js" data-view="doc">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Nikunj Bhavsar, data scientist and developer</title>
+    <meta name="description" content="{{SITE_DESCRIPTION}}" />
+    <link rel="canonical" href="https://nikunjbhavsar.com/" />
+    <meta name="theme-color" content="#1c1c1b" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Nikunj Bhavsar" />
 
-    <header>
-        <h1>Learning how to tell interesting stories through <span class="highlight">Data and Maths.</span></h1>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nikunj Bhavsar" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://nikunjbhavsar.com/" />
+    <meta property="og:title" content="Nikunj Bhavsar, data scientist and developer" />
+    <meta property="og:description" content="{{SITE_DESCRIPTION}}" />
+    <meta property="og:image" content="https://nikunjbhavsar.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nikunj Bhavsar's name and tagline over a field of scattered data points." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nikunj Bhavsar, data scientist and developer" />
+    <meta name="twitter:description" content="{{SITE_DESCRIPTION}}" />
+    <meta name="twitter:image" content="https://nikunjbhavsar.com/og.png" />
+    <meta name="twitter:image:alt" content="Nikunj Bhavsar's name and tagline over a field of scattered data points." />
+
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script>
+      // Decide the view before first paint, so there is no flash of the wrong layout.
+      (function () {
+        var d = document.documentElement;
+        d.classList.replace('no-js', 'js');
+        var narrow = matchMedia('(max-width: 899px), (max-height: 539px)').matches;
+        var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var saved = null;
+        try { saved = sessionStorage.getItem('view'); } catch (e) {}
+        d.dataset.view = narrow ? 'doc' : saved || (reduced ? 'doc' : 'field');
+      })();
+    </script>
+    <!--JSONLD-->
+  </head>
+  <body>
+    <a class="skip-link" href="#doc" id="skip-link">Skip to content</a>
+
+    <header class="masthead">
+      <a class="mark" href="#/">nb.<span class="visually-hidden"> Nikunj Bhavsar, back to the start</span></a>
+      <p class="readout" aria-live="polite"><span class="readout-path mono" id="readout-path"></span><span class="readout-xy mono" id="readout-xy" aria-hidden="true"></span></p>
+      <button class="view-toggle mono" id="view-toggle" type="button" aria-pressed="false">List view</button>
     </header>
 
-    <section id="work">
-        <h2>Work</h2>
-        <div class="project-grid">
-            <div class="work-card">
-                <a href="https://www.rephrain.ac.uk/" target="_blank">
-                    <div class="work-title">
-                        <span>Rephrain</span>
-                        <span class="work-arrow">→</span>
-                    </div>
-                    <p class="work-description">Rephrain is a UKRI backed Research Centre focusing on Privacy, Harm Reduction and Adversarial Influence Online. </p>
-                    <div class="work-tags">
-                        <span class="tag">Web Developer</span>
-                        <span class="tag">Part Time</span>
-                        <span class="tag">Dec 2025 - Present</span>
-                    </div>
-                </a>
-            </div>
-            <div class="work-card">
-                <a href="https://theplacetobegallery.com/" target="_blank"> 
-                    <div class="work-title">
-                        <span>The Place to be Gallery</span>
-                        <span class="work-arrow">→</span>
-                    </div>
-                    <p class="work-description">The Place to be Gallery is a contemporary art space dedicated to showcasing emerging artists and introducing them to NFTs.</p>
-                    <div class="work-tags">
-                        <span class="tag">Web Developer</span>
-                        <span class="tag">Intern</span>
-                        <span class="tag">Jan 2024 - May 2024</span>
-                    </div>
-                </a>
-            </div>
+    <main id="main">
+    <div class="stage" id="stage">
+      <canvas class="field" id="field" aria-hidden="true"></canvas>
 
+      <div class="hero" id="hero">
+        <h1 class="hero-name"><span class="hero-line">Nikunj</span> <span class="hero-line hero-line--2">Bhavsar</span></h1>
+        <p class="hero-role mono">Data scientist and Developer</p>
+        <p class="hero-tagline">Learning how to tell interesting stories through Data and Maths.</p>
+        <div class="hero-actions">
+          <button class="explore" id="explore" type="button">Explore</button>
+          <span class="hero-hint mono" id="hero-hint"></span>
         </div>
+      </div>
 
+      <div class="field-labels" id="field-labels" aria-hidden="true"></div>
+      <div class="field-nodes" id="field-nodes" role="group" aria-label="Projects"></div>
 
-        <h2>Projects</h2>
-        <div class="project-grid">
+      <nav class="legend" id="legend" aria-label="Sections"><!--LEGEND--></nav>
 
-            <div class="project-card">
-                <div class="image-placeholder">
-                    <a href="UK housing Analysis.pdf" target="_blank">
-                     <img src="Gemini_Generated_Image_6ht4mz6ht4mz6ht4.png" alt="">
-                    </a>
-                </div>
-                <h3>UK Housing Investment Analysis</h3>
-                <p>Data Science Project</p>
-            </div>
-
-            <div class="project-card">
-                <div class="image-placeholder">
-                    <a href="Nikunj Bhavsar FInal Report.pdf" target="_blank">
-                     <img src="image.png" alt="">
-                    </a>
-                </div>
-                <h3>ISL Translator</h3>
-                <p>Machine Learning Project</p>
-            </div>
-            <div class="project-card">
-                <div class="image-placeholder">
-                    <a href="5F92F76C-FD07-48C7-8F2E-5D8EF5400A4C.pdf" target="_blank">
-                        <img src="Gemini_Generated_Image_kv0rd5kv0rd5kv0r (1).png" alt="">
-                    </a>
-                </div>
-                <h3>PCA for Diabetic Diagnosis</h3>
-                <p>Machine Learning Project</p>
-            </div>
-            <div class="project-card">
-                <div class="image-placeholder">
-                        <img src="imagepca.png" alt="">
-                    </a>
-                </div>
-                <h3>Music Recommendation Engine</h3>
-                <p>Machine Learning Project</p>
-            </div>
+      <aside class="panel" id="panel" aria-labelledby="panel-title" hidden>
+        <div class="panel-head">
+          <a class="panel-back mono" id="panel-back" href="#/explore">Close</a>
         </div>
-    </section>
+        <div class="panel-body" id="panel-body"></div>
+      </aside>
+    </div>
 
-        <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-content">
-                <p>Hello there! I am Nikunj Bhavsar, a Data Scientist and Developer with a strong foundation in data analysis, machine learning, and software development. I moved to the UK in 2022 to pursue higher education and have since developed a passion to create impactful solutions. Currently pursuing an MSc in Data Science at the University of Bristol, I am eager to apply my skills to solve real-world problems and contribute to innovative projects.</p>
-                <h3>
-                    Education
-                </h3>
-                <p>
-                    MSc Data Science, University of Bristol (2025-present) <br> BSc (Hons) Computer Science, University of Hertfordshire, UK (2022-2025, First Class Hons.)
-                </p>
+    <div class="doc" id="doc" tabindex="-1"><!--DOC--></div>
+    </main>
 
-            </div>
-            <div class="skill-content">
-                <h3>Skills</h3>
-                <p>
-                    <p><strong>Programming:</strong> Python, R, SQL, Java</p>
-                    <p><strong>Data Analysis:</strong> Pandas, NumPy, Scikit-learn</p>
-                    <p><strong>Machine Learning:</strong> Regression, Classification, Clustering</p>
-                    <p><strong>Data Visualization:</strong> Matplotlib, Seaborn, Plotly</p>
-                    <p><strong>Web Development:</strong> HTML, CSS, Flask, JavaScript, React</p>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Let's Connect</h2>
-        <div class="contact-links">
-            <a href="Nikunj_Bhavsar.pdf" target="_blank" class="contact-link">Resume</a>
-            <a href="mailto:nikunj15bhavsar@gmail.com" class="contact-link">Email</a>
-            <a href="https://www.instagram.com/notnikunj" class="contact-link" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/in/nikunj-bhavsar-3ab1932a3/" class="contact-link" target="_blank">LinkedIn</a>
-            <a href="https://github.com/notnikunj" class="contact-link" target="_blank">GitHub</a>
-        </div>
-    </section>
-
-
-    <footer id="about">
-        <p>© Nikunj Bhavsar</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

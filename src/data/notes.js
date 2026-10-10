@@ -1,0 +1,8 @@
+// Notes and ideas
+
+export const notes = [
+    { id: 'indian-edtech-reset', title: 'The Indian edtech reset', date: 'Oct 2026', body: 'India’s edtech opportunity may be shifting from raising millions of users to solving specific educational problems profitably. The interesting question is which products can build sustainable businesses around learning outcomes rather than discounts, advertising, and expensive customer acquisition.', href: null },
+    { id: 'offline-online', title: 'Why offline coaching still wins', date: 'Oct 2026', body: 'Digital learning offers convenience and scale, but local coaching classes provide structure, accountability, personal attention, and parental trust. The strongest edtech model may not replace offline education, but give offline educators the technology to serve students better.', href: null },
+    { id: 'learning-analytics', title: 'Can data identify a struggling student early?', date: 'Oct 2026', body: 'Patterns in attendance, quiz performance, missed assignments, and changes in participation may reveal learning difficulties before examination results do. The opportunity is to help teachers intervene earlier, while ensuring that predictive systems do not unfairly label students or turn limited data into definitive judgments.', href: null },
+    { id: 'rolls-royce-data', title: 'What a jet engine teaches us about data', date: 'Oct 2026', body: 'Modern aircraft engines generate enormous amounts of operational data, enabling condition monitoring and predictive maintenance. The broader lesson is that the most valuable industrial AI often prevents expensive failures rather than producing something visibly new.', href: null },
+];
