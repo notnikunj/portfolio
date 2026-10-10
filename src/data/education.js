@@ -7,7 +7,7 @@ export const education = [
     institution: 'University of Bristol',
     start: '2025',
     end: '2026',
-    result: null,
+    result: 'Expected: Distinction',
     modules: [
       'Statistical Computing',
       'Large Scale Data Engineering',
